@@ -1,0 +1,70 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+    background: #000000;
+    background: linear-gradient(50deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 1) 80%, rgba(105, 0, 0, 1) 95%, rgba(158, 0, 0, 1) 100%);
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+h1 {
+    text-align: left;
+    margin: 10px;
+    color: #949494;
+}
+
+.games-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.game {
+    background: white;
+    margin: 10px;
+    padding: 10px;
+    width: calc(33.33% - 20px); /* Ширина блока с учетом отступов */
+    box-sizing: border-box;
+    cursor: pointer;
+    background-color: #850101;
+    transition: background-color 0.3s ease;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.game:hover {
+  background: #c71616;
+}
+
+.game img {
+    width: 100%; /* Ширина изображения */
+    height: auto;
+    border-radius: 4px;
+}
+
+.game-info {
+    flex-grow: 1;
+}
+
+.description {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+}
+
+.description.active {
+    max-height: 100px; /* Задайте подходящую максимальную высоту для описания */
+    opacity: 1; /* Сделать описание видимым */
+    overflow-y: auto; /* Включить прокрутку для длинных описаний */
+    scrollbar-color: #850101 #262626; /* Цвет ползунка и трека */
+}
+
+.contacts {
+  text-align: left;
+  color: white;
+}
